@@ -1,0 +1,9 @@
+name: Test
+on: [workflow_dispatch]
+
+jobs:
+  Run-mac-job:
+    name: Run job on mac
+    runs-on: macos-latest
+    steps:
+      - run: sysctl -n machdep.cpu.brand_string
