@@ -1,26 +1,9 @@
 import React from "react";
 import { registerRootComponent } from "expo";
-import { StyleSheet, View, Text } from "react-native";
+import AppNavigation from "./navigation/app-navigation";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  copyright: {
-    fontSize: 12,
-    color: "#0AB4B4",
-  },
-});
-
-export default function App(): JSX.Element {
-  return (
-    <View style={styles.container}>
-      <Text className="text-xl">React Native Boilerplate</Text>
-      <Text style={styles.copyright}>by nxhawk</Text>
-    </View>
-  );
+export default function App() {
+  return <AppNavigation />;
 }
 
 registerRootComponent(App);
